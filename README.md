@@ -1,6 +1,6 @@
 # RHEL7lab2018
 # RHEL7 2018 Summit Lab
-Written By: Christoph Doerbeck, Matt St. Onge, Joe Hackett & Eddie Chen
+Written By: Matt St. Onge, Christoph Doerbeck,Joe Hackett & Eddie Chen
 
 
 Version 1.0 16 Feb 2018 
