@@ -39,13 +39,13 @@
       yum: name=system-storage-manager state=installed
 
     - name: LAB Setup (LVM - create block devices)
-      shell: for i in {0..5} ; do [[ -e /var/tmp/disk${i}.img ]] || fallocate -l 100M /var/tmp/disk${i}.img ; done
+      shell: for i in {0..7} ; do [[ -e /var/tmp/disk${i}.img ]] || fallocate -l 100M /var/tmp/disk${i}.img ; done
 
     - name: LAB Setup (LVM - create new partitions)
-      shell: for i in {0..5} ; do printf "o\nn\np\n\n\n\nt\n8e\nw\n" | fdisk /var/tmp/disk${i}.img  ; done
+      shell: for i in {0..7} ; do printf "o\nn\np\n\n\n\nt\n8e\nw\n" | fdisk /var/tmp/disk${i}.img  ; done
 
     - name: LAB Setup (LVM - setup kpartx loopbacks)
-      shell: for i in {0..5} ; do kpartx -av /var/tmp/disk${i}.img  ; done
+      shell: for i in {0..7} ; do kpartx -av /var/tmp/disk${i}.img  ; done
 
     - name: Required packages for lab section (NMCLI)
       yum: name=teamd state=installed
